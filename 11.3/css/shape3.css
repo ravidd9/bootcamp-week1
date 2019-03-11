@@ -1,0 +1,40 @@
+#parent{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+}
+.child{
+    position: absolute;
+}
+#child1{
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#child2{
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+    right: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#child4{
+    background-color: red;
+    width: 400px;
+    height: 200px;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#child3{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    left: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

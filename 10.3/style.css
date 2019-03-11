@@ -1,0 +1,30 @@
+body{
+    font-family: Tahoma;
+}
+img{
+    width: 200px;
+    height: 100px;
+}
+
+
+#container{
+    box-shadow: 3px 3px 5px black;
+    display: inline-block;
+    background-color: darkgray;
+}
+.box{
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+#first{
+    background-color: lightseagreen;
+}
+#second{
+    background-color: chocolate;
+}
+.button{
+    background-color: rgb(57, 253, 57);
+    border: 2px solid darkgreen;;
+}

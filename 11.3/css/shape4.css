@@ -1,0 +1,48 @@
+#parent{
+    width: 425px;
+    height: 225px;
+    position: relative;
+    background-color: black;
+}
+.child{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: #66320E;
+}
+#child1{
+    left: 5px;
+    top: 5px;
+}
+#child2{
+    left: 110px;
+    top: 5px;
+}
+#child3{
+    left: 215px;
+    top: 5px;
+}
+#child4{
+    left: 320px;
+    top: 5px;
+}
+#child5{
+    left: 5px;
+    bottom: 5px;
+}
+#child6{
+    left: 110px;
+    bottom: 5px;
+}
+#child7{
+    left: 215px;
+    bottom: 5px;
+}
+.bar{
+    background-color: darkred;
+    height: 5px;
+    width: 415px;
+    left: 5px;
+    top: 110px;
+    position: absolute;
+}

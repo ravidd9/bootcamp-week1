@@ -1,0 +1,49 @@
+#parent{
+    width: 350px;
+    height: 200px;
+    background-color: slateblue;
+    position: relative;
+}
+.column{
+    position: absolute;
+    background-color: grey;
+    width: 30px;
+    bottom: 5px;
+}
+#child1{
+    height: 30px;
+    left: 10px;
+}
+#child2{
+    height: 110px;
+    left: 50px;
+}
+#child3{
+    height: 160px;
+    left: 90px;
+}
+#child4{
+    height: 150px;
+    left: 130px;
+}
+#child5{
+    height: 140px;
+    left: 170px;
+}
+#child6{
+    height: 70px;
+    left: 210px;
+}
+.text{
+    font-family: Tahoma;
+    font-size: 20px;
+}
+#money{
+    left: 10px;
+    position: absolute;
+}
+#time{
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+}
