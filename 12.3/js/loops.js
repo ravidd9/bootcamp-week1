@@ -137,7 +137,7 @@ const dictionary = {
     // console.log(letter)
     words = dictionary[index]
     console.log(" words that begin with " + index + ":") //originly letter[index]
-    for(let index2 in words){
-      console.log("   " + words[index2])
+    for(let index2 of words){
+      console.log("   " + index2)
     }
   }
