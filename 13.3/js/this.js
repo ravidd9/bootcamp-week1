@@ -35,25 +35,25 @@
 
 
 //3
-// const pumpFuel = function (plane) {
-//   plane.fuel += 1;
-// }
-// const airplane = {
-//   fuel: 0, //added key and value
-//   fly: function () {
-//     if (this.fuel < 2) { //added this.
-//       return 'on the ground!';
-//     }
-//     else {
-//       return 'flying!';
-//     }
-//   }
-// }
-// console.log('The plane should not be able to fly (yet): ' + airplane.fly());
-// pumpFuel(airplane);
-// console.log('The plane should STILL not be able to fly: ' + airplane.fly());
-// pumpFuel(airplane);
-// console.log('Take off! ' + airplane.fly());
+const pumpFuel = function (plane) {
+  plane.fuel += 1;
+}
+const airplane = {
+  fuel: 0, //added key and value
+  fly: function () {
+    if (this.fuel < 2) { //added this.
+      return 'on the ground!';
+    }
+    else {
+      return 'flying!';
+    }
+  }
+}
+console.log('The plane should not be able to fly (yet): ' + airplane.fly());
+pumpFuel(airplane);
+console.log('The plane should STILL not be able to fly: ' + airplane.fly());
+pumpFuel(airplane);
+console.log('Take off! ' + airplane.fly());
 
 
 //4
@@ -96,6 +96,41 @@
 
 
 //6
+// const coffeeShop = {
+//   beans: 40,
+//   drinkRequirements: {
+//     latte: 10,
+//     americano: 5,
+//     doubleShot: 15,
+//     frenchPress: 12
+//   },
+//   makeDrink: function (drinkType) {
+//     let drinks = Object.keys(this.drinkRequirements)
+//     for(let index in drinks){
+//       if(drinks[index] == drinkType) {
+//         if(this.beans >= this.drinkRequirements[drinkType]){
+//           this.beans-=this.drinkRequirements[drinkType]
+//           console.log("your " + drinkType + " is ready!")
+//           console.log("remaining beans: " + this.beans)
+//           return
+//         }
+//         else{
+//           console.log("Sorry, we're all out of beans!")
+//           return
+//         }
+//       }
+//     }
+//     console.log("Sorry, we don't make " + drinkType)
+//   }
+// }
+// coffeeShop.makeDrink("latte"); 
+// coffeeShop.makeDrink("americano");
+// coffeeShop.makeDrink("filtered"); //should alert/console "Sorry, we don't make filtered"
+// coffeeShop.makeDrink("doubleShot");
+// coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
+
+
+//6.1
 const coffeeShop = {
   beans: 40,
   drinkRequirements: {
@@ -103,24 +138,31 @@ const coffeeShop = {
     americano: 5,
     doubleShot: 15,
     frenchPress: 12
+    
   },
   makeDrink: function (drinkType) {
     let drinks = Object.keys(this.drinkRequirements)
+    let isExist = false
+    let isEnoughBeans = false
     for(let index in drinks){
-      if(drinks[index] == drinkType) {
-        if(this.beans >= this.drinkRequirements[drinkType]){
-          this.beans-=this.drinkRequirements[drinkType]
-          console.log("your " + drinkType + " is ready!")
-          console.log("remaining beans: " + this.beans)
-          return
-        }
-        else{
-          console.log("Sorry, we're all out of beans!")
-          return
-        }
+      if(drinks[index]==drinkType){
+        isExist = true;
+      }
+      if(this.beans >= this.drinkRequirements[drinkType]){
+        isEnoughBeans = true
       }
     }
-    console.log("Sorry, we don't make " + drinkType)
+    if(isExist && isEnoughBeans){
+      this.beans-=this.drinkRequirements[drinkType]
+      console.log("your " + drinkType + " is ready!")
+      console.log("remaining beans: " + this.beans)
+    }
+    else if(isExist && !isEnoughBeans){
+      console.log("Sorry, we're all out of beans!")
+    }
+    else{
+      console.log("Sorry, we don't make " + drinkType)
+    }
   }
 }
 coffeeShop.makeDrink("latte"); 
